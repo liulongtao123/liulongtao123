@@ -1,0 +1,168 @@
+Day2
+www.gitee.com     码云
+公有云，私有云免费
+记电子版笔记
+
+键盘的标准指法
+
+Sublime  text  3     文本编辑器
+启动命令：
+subl    或subl   文件路径名
+作用：
+用来编写无格式的纯文本文件
+Sublime的快捷操作
+打开和隐藏侧边栏操作
+View-->side bar-->show/hide  set bar
+Ctrl  +k   b
+字体的放大和缩小
+Ctrl + "+"/"-"
+创建和取消多个光标
+创建：Ctrl+鼠标左键单击
+取消：ESC键
+多行注释/取消注释
+Ctrl+/
+复制
+Ctrl+c
+粘贴
+Ctrl+v
+交替换行：
+Ctrl+shift+上下方向键
+保存文件
+Ctrl+s
+多选相同的块
+Ctrl+d
+
+Cat命令
+作用：将文件内容作为标准输出打印到终端
+格式：
+Cat     文件名1     文件名2
+例：
+Cat ../day01/day01.txt
+
+More命令
+作用：分页显示文本文件的内容
+格式：more    文件名
+示例：more ../day01/day01.txt
+基本操作：q退出    空格 下翻一页
+
+通配符
+* 匹配0个、1个或多个任意字符
+？匹配一个任意字符
+示例：
+touch a ab ac abc aabb bc cd 
+ls a?	#匹配以a开头只有两个字母的文件
+ls a*	#匹配所有以a开头的文件
+ls ?c
+ls *c
+ls a*b
+rm *c
+
+cp命令
+作用： 复制文件或文件夹
+格式： cp [选项] 源文件或文件夹    目标文件或文件夹
+示例： 
+cp     ../day01.txt    ~/
+#以下是复制过程中改名
+cp     ../day01.txt    ~/day01.txt.bak
+常用选项：
+-a       复制文件夹中的全部内容
+
+练习：
+
+1.复制/etc/passwd文件到档期那用户主目录下的aid1805/linux/day02目录
+2.把复制后的passwd中的冒号（：）全部改为减号（-），并保存
+3.把修改后的passwd复制到用户主目录下，并改名为 mypasswd.txt
+
+mv命令
+作用：文件搬移或更名
+格式：mv 源文件或文件夹    目录文件或文件夹
+示例：
+mv   passwd  mypw      #改名字
+mv   passwd  ~/            #移动文件
+
+find 命令
+作用：根据文件名等信息查找指定的文件
+格式：find 路径 -name   "文件名“
+示例：
+#查找用户主目录下有哪些文件以.txt结尾
+#find  ~ -name   "*.txt"
+
+grep命令：
+作用：查找文件中相应的内容，及文本信息
+格式：grep "内容" [选项]文件名或路径
+常用选项：
+-n 	显示行号
+-r/-R 	递归搜索文件夹内的文件
+示例： 
+grep  "文件" *.txt
+grep  "命令" -n  *.txt     #显示行号
+grep  "root"   -nr   /etc
+
+练习：
+搜索/etc下有哪些文件的第多少行含有“tedu"这个词
+grep "tedu" -nr /etc       #显示太多的错误信息
+grep "tedu" -nr /etc 2>  /dev/null
+
+压缩和解压命令：
+gzip命令：
+作用：在zip压缩算法对文件进行压缩，生成压缩后的文件
+格式：
+gzip   文件名	
+.gz                      为用gzip压缩的文件
+gunzip 命令
+作用： 用gzip压缩过的文件进行解压
+格式：
+gunzip   文件名
+示例：
+cp /etc/passwd ~/
+gzip  ~/psaawd
+ls -l  ~/psaawd.gz
+gunzip ~/psaawd.gz
+ls -l ~/psaawd.gz
+
+tar命令
+作用： 对文件或文件夹进行打包和解包的操作
+格式：tar[选项]文件名[文件名或路径]
+常用选项：
+-c	创建包
+-x	解包
+-v	显示操作的文件细节
+-z	用gzip/gunzip对包进行压缩和解压缩
+-f  文件名	正字操作的文件名
+-c  路径	改变解压缩路径（只对解包有效）
+示例：
+#将 linux/day01 打包并压缩为day01.tar.gz
+tar -czvf  day01.tar.gz    linux/day01
+#将 day01.tar.gz  解包
+cd ~/
+tar -xzvf   aid1805 /day01.tar.gz
+
+练习：
+1.在用户住目录下创建文件夹mydir1,mydir2
+2.在mydir1下创建myfile1.txt,myfile2.txt,myfile3.txt
+3.将mydir1 打包压缩为：mydir1.tar.gz放在用户主目录下
+4.将mydir1.tar.gz移动到mydir2下
+5.进入mydir2下，将mydir1.tar.gz解包到此文件夹下
+
+答案
+1.cd ~
+mkdir  mydir1  mydir2
+2.cd mydir1
+touch myfile1.txt    myfile2.txt   myfile3.txt
+3.cd ..
+tar -zcvf mydir1.tar.gz   mydir1
+4.mv mydir1.tar.gz mydir2
+5.cd mydir2
+tar -zxvf  mydir1.tar.gz
+
+
+
+
+
+
+
+
+
+
+
+
