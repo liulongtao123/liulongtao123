@@ -1,0 +1,158 @@
+python的简介：
+创始人：Guido van Rossum (荷兰人)
+时间： 1989 圣诞节期间
+地点：阿姆斯特丹
+python的命令：源于一个喜剧团  Monty python
+
+python 的应用领域：
+系统运维
+网络编程
+科学计算
+人工智能，机器人
+web开发
+大数据及数据库编程
+云计算
+教育
+游戏，图像
+其他
+
+python的优缺点
+优点：
+面向对象（Java，c++， python）
+免费
+可移植
+可混合编程（c/c++/java/.net）
+简单易学易用
+应用领域广泛
+开发效率高
+开源
+缺点：
+与c/c++相比执行速度不够快
+不能封闭代码
+
+python的官网：
+www.python.org
+
+python的版本
+python V2.7（2020年结束维护）
+python V3.5 （当前教学版本）
+python  V3.8 (最新版本)
+
+python的安装
+
+Windows /mac os x /linux
+
+python 的运行
+python的解释执行器
+cpython——c
+jpython ——Java
+ironpython——.net
+pypy——python
+
+第一个python程序
+见：hello.py
+python的运行：
+#方法1
+$ python3 hello.py
+#方法2
+#在hello.py 的第一行写入：
+#！ /usr/bin/python3
+$ chmod u+x hello.py
+$ ./hello .pyh
+
+python 的交互提示模式
+ $ python3
+>>>    #  <-- 可以在>>>提示符下输入语句
+
+退出：
+ctrl + d
+>>>quit()
+>>>exit()
+
+python的注释
+# 井号开头，直到结尾
+作用：
+让注释内容不参加解释执行
+
+python 的核心数据类型：
+数字（整数、浮点型、复数、布尔型）
+字符串
+列表等
+
+预习：
+数据类型：
+整数、浮点型、复数、布尔型
+运算符：
++ - * / // % **
+变量 和赋值语句
+is 和is not 运算符
+del 语句
+ 比较运算符：
+<   <=  >  >=   == !=
+
+练习：
+1.创建如下的文件夹结构：
+           aid 1805
+              |
+          pdase
+ + ------- + -------------+
+  |	 |	       |
+day00    day01             day02
+  |               |	       |
+day00.txt  day01.txt      day02.txt
+将以上文件夹创建并打包为pbase.tar.gz
+2.查找python3 这个文件在什么地方
+3.查找os.py这个文件在什么地方？ 把这个文件的位置重定向到“os.txt”文件中
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
